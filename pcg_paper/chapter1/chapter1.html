@@ -1,0 +1,16 @@
+<h1>Generating graphical content using grammars and graphs</h1>
+<h3>Jess Martin</h3>
+
+<h1>Abstract</h1>
+
+<p>Procedural techniques can automate and allow run-time execution of tedious tasks and generate arbitrarily complex content that would require large amounts of human effort. Also, due to the algorithmic nature of the methods, procedures can be constructed to create new content at run-time and respond during a simulation or video game with content adapted to unique situations that may arise at runtime. Procedural techniques have been in use for many years for content such as textures and trees. Using a generic framework consisting of a generative grammar and a graph encoding, new types of content such as residential floor plans and video game maps can be generated automatically as well.</p>
+
+<h1>1  Introduction</h1>
+
+<p>As the capability to render complex, realistic scenes in real time increases, many applications of computer graphics are encountering problems related to the content of the scenes. First is the problem of manual model creation. In virtual reality, researchers have found that creating and updating static models is a difficult and time-consuming task [Brooks 1999]. New games require large amounts of content, the creation of which is such an expensive process that it may drive smaller companies out of business [Wright 2005]. Content creators cannot keep up with the increasing demand for high-quality models. Algorithms will have to be called upon to assist. Additionally, as complexity and realism of scenes increases, repetition in textures and models become more readily apparent. Traditional modeling requires a static model to be created and stored for any variation in size or shape. Static models do not alone serve the needs of complex scenes. Dynamically generated models are required.</p>
+
+<p>Content generated statically cannot adapt dynamically to accommodate changes in a video game or simulation. Static models must be created for each possible configuration or interaction, limiting the appearance of natural variation and interactivity found in the real world. Static scenes in video games limit the replayability by only allowing the player to play through the game in pre-scripted ways. Procedural methods can adaptively generate new models and scenes to increase the possibility space.</p>
+
+<p>Procedural methods, algorithms that specify some characteristic of a scene and generate a model [Ebert et al. 2002], are a possible solution to the problem of manual model creation and dynamically changing content. With such methods, the algorithm, not a human artist, determines the detailed attributes of the scene-attributes ranging from color to motion to objects.</p>
+
+<p>This paper reports work on two different procedural methods for generating content useful for games and simulations. We also observe the similarities between the two methods presented and suggest a general form for methods to generate new types of content procedurally.</p>

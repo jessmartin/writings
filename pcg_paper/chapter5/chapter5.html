@@ -1,0 +1,96 @@
+<h1>5  Map Generation</h1>
+
+<p>Automatic map generation has been present in video games since the first games were created several decades ago. Due to space restrictions on early computers and consoles, a level would often be randomly generated to avoid the cost of storing the level layout. As storage constraints relaxed due to advances in technology, the majority of video game creators favored statically generated levels. As an exception, recent games Diablo and Elder Scrolls II: Daggerfall feature randomly generated dungeons. However, these dungeons represent random elements within a fixed plot. Procedural methods could be used to generate an entire plot.</p>
+
+<p>In the class of computer role-playing games, the map acts as a series of constraints which restrict the player to a certain path. Along this path, the player encounters people, enemies, objects, and locations. The sequence of encounters the player experiences can be thought of as the plot of the game. Notice that in order to impose a certain plot on the player, what is needed is a properly constructed map. We propose a method that intelligently combines common plot elements to construct an entirely procedural plot for role-playing games, going beyond merely randomly generated dungeons.</p>
+
+<h2>5.1  Algorithm Principles</h2>
+
+<p>Joseph Campbell observed that many important myths share a similar structure he termed the monomyth [Campbell 1949]. He outlined the basic structure of a hero's journey by dividing the story into three chapters or "acts": Departure, Initiation, and Return. Within each of these acts there are a variety of events which may or may not occur as the hero progresses through them. The genre of console role-playing games share a similar structure, many of which have been documented [Sachs 2004]. We use the act-based structure of Campbell's monomyth and the content of the common genre clichés to construct our algorithm.
+
+<ul>
+  <li>Nested Graph generation</li>
+  <li>Room expansion</li>
+</ul>
+</p>
+
+<h2>5.2  Nested Graph Generation</h2>
+
+<p>The graph structure used to encode a story is a nested graph. Each node of the graph can itself contain another graph. A node that contains another graph indicates that the elements of the graph occur within the node's context. For example, an act could contain a town and a dungeon, the town could then contain an inn and a weapon shop, and the weapon shop could then contain a blacksmith. Connections between nodes indicate reachability or, in other words, the player can move between the two connected nodes without impediment. If multiple nodes exist at the same level without connections between them it is implied that they are all reachable to one another. Figure 5 represents an example of a common nested graph.</p>
+
+<p>Figure 5: A sample nested graph representing a story plot.</p>
+
+<h3>5.2.1  Acts</h3>
+
+<p>Acts are the outermost nodes of the nested graph that contain other graphs and are represented by the circular nodes in Figure 5. Each act represents a region where some significant amount of the story will take place. Thus, acts also often contain locations such as towns and dungeons to visit, enemies to fight, non-player characters to interact with, items to acquire, and side quests for optional story development. For example, in Joseph Campbell's analysis, most stories can be decomposed into three primary acts. In order to enforce that the player experiences the plot's development in the proper order, acts are typically separated by barriers.</p>
+
+<h3>5.2.2  Barriers</h3>
+
+<p>Barriers are a special type of node that are represented by the rectangular nodes in Figure 5. They represent an obstacle to reachability. In order to progress to the next node, the barrier has a constraint that must be satisfied before it can be bypassed. Common examples of constraints from RPG plots include enemies that have to be defeated, a broken bridge that must be repaired, or a stream that must be crossed. Some barriers may require a specific item such as a hammer to repair the bridge. Others may require a vehicle such as a canoe to cross a stream. The item or vehicle that is required to bypass the barrier must be reachable within the previous area. Barriers generally connect different acts of the plot, but they can also be used within an act to allow more fine-grained control over plot development.</p>
+
+<p>Barriers can be generalized to be one of three types: gates, toll roads, and portals. The type of the barrier influences adjacency restrictions for the two nodes that it connects.
+
+  <ul>
+    <li>Gates are a single tile that separates two adjacent nodes. The nodes must be located immediately next to one another. Examples include a broken bridge, a locked dungeon door, or a blocked mountain pass.</li>
+    <li>Portals</b> are a barrier that actually transports the player from one section of the map to another and therefore do not require the nodes to be located adjacent to one another. Examples include a tunnel through unpassable mountains, a teleportation device, or a ferry across an uncrossable river.</li>
+    <li>Toll roads</b> are a series of tiles that separates nodes. Usually a toll road makes a previously untraversable type of tile traversable. Examples include swamplands traversable by canoe, a body of water only traversable boat, or snow traversable only with snowshoes.</li>
+  </ul>
+</p>
+
+<h3>5.2.3  Rules</h3>
+
+<p>The rule system controls the generation of the nested graph via a list of simple grammar-based rules of the form A --> B-C|D, where A, B, C, and D are nodes and node A will be filled by either the subgraph of node B connected to node C or the node D. Unlike most grammar-based rule systems, a production rule does not indicate the replacement of the node on the left-hand side, but rather that the right-hand side be nested within the node on the left-hand side. A simple set of default rules are listed below.</p>
+
+<p>Ultimately, each node represented in the rule system must have some content associated with it in order for the graph expansion algorithm to know how to represent the node when it is expanded into a two-dimensional map.</p>
+
+<p>
+Arc = Start Symbol
+Arc --> SWSIntro-Barrier-SWSAct-Barrier-SWSEnd
+SWSIntro --> Town|Town-Sidequest
+SWSAct --> Town-Dungeon-Sidequest
+SWSEnd --> Town-FinalCastleDungeon-Sidequest|Town-FinalCastleDungeon
+Barrier --> GateBarrier|PortalBarrier|TollRoadBarrier
+GateBarrier --> ItemBarrier|NPCBarrier|SkillBarrier|EnemyBarrier
+PortalBarrier --> 
+TollRoadBarrier --> VehicleBarrier
+ItemBarrier --> SkeletonKeyBR|BrokenBridgeBR
+NPCBarrier --> FortuneTellerBR|TravellingWizardBR|PrincessBR
+EnemyBarrier --> DragonBR|OrcBR
+VehicleBarrier --> ShipBR|ChocoboBR|SnowshoeBR
+SkillBarrier --> FireBR|IceBR|GrowBR
+Sidequest --> Collect10FishSQ|SewerMazeSQ|WaterfallSQ|AlligatorWrestlingSQ
+Town --> DesertTown|LakeTown|MountainTown
+DesertTown --> NPC*
+LakeTown --> NPC*
+MountainTown --> NPC*
+Dungeon --> FireDungeon|IceDungeon|EvilCastleDungeon
+</p>
+
+<h2>5.3  Graph Expansion</h2>
+
+<h3>5.3.1  Act Generation</h3>
+
+<p>
+  Each of the acts is represented on the map as an area divided by impassable barriers such as water or mountains. The shape of the area for each map is generated by a technique we call shape-splatting. The algorithm for shape-splatting with a set of primitive shapes (triangle, rectangle, hexagon) is as follows:
+
+  <ol>
+    <li>Place a random primitive shape that is 70% of the land mass area required.</li>
+    <li>Create another random primitive and add it to the existing shape with a slight offset.</li>
+    <li>Iterate step 3 until within some threshold of the desired land mass area.</li>
+  </ol>
+</p>
+
+<p>The algorithm produces shapes that resemble the land mass in Figure 6. Land masses are connected by finding the outermost extremity of the shapes and connecting them in accordance with the type of barrier that connects them.</p>
+
+<h3>5.3.2  Intra-Act Placement</h3>
+
+<p>After the land masses for each of the acts have been generated and connected, the act needs to be populated with the locations, enemies, and terrain found in the act. The general strategy for placement of items within the act will be a technique called localized dart-throwing [Dunbar 2006]. This technique will allow enemies, buildings, and terrain elements such as rocks to be placed with a reasonable density without overlapping existing objects. A few rules will need to be observed in the use of the dart-throwing algorithm to ensure a sensical layout.
+
+  <ul>
+    <li>Towns needs to be contained within a subregion of the act's area. Buildings and non-player characters should be placed within that subregion. Enemies should not be allowed to be placed within the subregion of the town.</li>
+    <li>Whatever barrier connects the current act from the next one, the element (item, object, person, enemy, etc) that satisfies the constraint of the barrier needs to be placed within that act and reachable.</li>
+    <li>The terrain (grass, sand, forestry) present in the act should match the type of town specified by the ruleset.</li>
+  </ul>
+</p>
+
+<p>The prior guidelines should be sufficient to prevent any nonsensical configurations. Further implementation details would be dependent on the game or application that is using the map and what specific nodes are present in the rule system.</p>
