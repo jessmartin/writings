@@ -1,13 +1,19 @@
 <h1>4  House Floorplan Generation</h1>
-<p>To date, procedural building algorithms produce buildings that are merely textured facades, containing no internal structure. Also, the buildings represent commercial-style buildings that would be seen in an urban setting. Most algorithms do not reflect architectural knowledge. We introduce a method for procedurally generating a single-family residential unit (a house) automatically. The first step used in generating the house is a grammar which constructs a graph of the rooms and connections between rooms. The rules of the grammar are based on architectural observations and are capable of producing houses in the style from which the rules are drawn. During the second step, rooms reach their appropriate sizes using Monte Carlo semi-deformable growth.</p>
+<p>To date, procedural methods for creating buildings have produced buildings that are merely textured facades, containing no internal structure. Also, most algorithms do not draw upon insights from architecture. We introduce a method for procedurally generating a single-family residential unit, a house, automatically. The first step in generating the house uses a grammar which constructs a graph of the rooms and connections between rooms. The rules of the grammar are based on insights gleaned from particular architectural styles. Consequently, the algorithm is capable of producing houses in the style from which the rules are drawn. During the second step, rooms reach their appropriate sizes using Monte Carlo semi-deformable growth.</p>
 
-<p>Our method of building generation is fundamentally different than methods previously discussed. Most other methods only undertake to generate exteriors of buildings with no interior structure or layout. Our method focuses on the floorplan with the assumption that the floorplan will eventually dictate the exterior appearance. Most other methods focus primarily on commercial buildings–office buildings, skyscrapers, and other large, fairly regular buildings. In exploring the problem of procedurally generated buildings, we found residential buildings to be more complex due to their immense variety and irregularity and chose them as the target for our new method.</p>
+<p>Our method of building generation is fundamentally different from methods previously discussed. While most methods generate only exteriors of buildings with no interior structure or layout, our method focuses on the floorplan with the assumption that the floorplan will eventually dictate most of the exterior appearance. Most other methods focus primarily on commercial buildings–office buildings, skyscrapers, and other large, fairly regular buildings. In exploring the problem of procedurally generated buildings, we found residential buildings to be highly complex due to their variety and irregularity and chose them as the target for our new method.</p>
 
 <h2>4.1 Algorithm Principles</h2>
 
-<p>Two insights from Christopher Alexander provided foundations for our work [Alexander et al. 1977]. First, Alexander points out that houses created by a particular set of patterns will not be able to account for houses of a different culture. Thus, we chose to focus on American-style residences. Second, Alexander’s description of the layout of residential units revealed a crucial distinction between two types of rooms: some rooms are designated private, intended to be used only by one individual or couple; other rooms are designated public, intended to be used by a group. This simple distinction formed the basis of our graph generation step. Additional architectural insight came from browsing hundreds of house plans. These plans allowed us to make broad statements about average American houses and guided the development of the algorithm’s ruleset which are based on commonalities among houses.</p>
+<p>Two insights from Christopher Alexander's architectural writings provided foundations for our work [Alexander et al. 1977]. First, Alexander points out that architectural patterns vary between cultures and a particular set of rules will not be able to produce houses of all different cultures. Thus, we chose to focus on American-style residences. Second, Alexander’s description of the layout of residential units revealed a crucial distinction between two types of rooms: some rooms are designated private, intended to be used by only one individual or couple; other rooms are designated public, intended to be used by a group. This simple distinction formed the basis of our graph generation step. Additional architectural insight came from browsing hundreds of house plans. These plans enabled us to make broad statements about average American houses that guided the development of the algorithm’s ruleset which is based on commonalities among houses.</p>
 
-<p>To ensure that the generated floor-plans are realistic, our method uses statistics and rules from common American homes such as the probability that a room will connect to another room, etc. These statistics and rules were gathered by analyzing many house plans by hand. Text files store the rulesets and the statistics, providing a human readable interface for external modification by the user. A user could potentially rewrite the rules and statistics to apply this method to buildings of other cultures.</p>
+<p>EXPLAIN WHY WE CARE ABOUT FOOTPRINT SIZE AND PUBLIC/PRIVATE SQUARE FOOTAGE</p>
+
+<p><em>Footprint Size.</em> The footprint determines the exterior boundaries of the house. High-land-value houses tend to consume more of the lot they are placed on, while houses with a lower land value tend to occupy less of the lot.</p>
+
+<p><em>Public to Private Square Footage Ratio.</em> In larger houses, it has been observed that private and public ratios begin to favor more square footage for public spaces. The increase in square footage is largely accounted for by public space. Conversely, in smaller houses the ratio of public to private space is closer to 1:1.</p>
+
+<p>To ensure that the floor-plans generated by our technique are realistic, our method uses statistics and rules from common American homes such as the probability that a room will connect to another room, etc. These statistics and rules were gathered by analyzing many house plans by hand. The rulesets and the statistics are stored in text files in a human-readable format. A user could potentially rewrite the rules and statistics to apply this method to buildings of other cultures.</p>
 
 <p>
   The procedure for generating residential units has two distinct steps:
@@ -28,7 +34,7 @@
 <p>The graph generation phase begins by determining the structure of the public rooms. The front door of the house is added first and production progresses using the context-free grammar according to the ruleset in Figure 3. This step is solely responsible for structure, not semantics. Thus, the rooms added are not yet a specific type of room.</p>
 
 <h3>4.2.2  Specifying Public Rooms</h3>
-<p>Step two assigns a type (living room, dining room, etc) to each public room by using four statistics for each type:
+<p>Step two assigns a type (living room, dining room, etc.) to each public room by using four characteristics for each type:
   <ul>
     <li>
       Must-attach room: A room that must be attached to that particular room. This captures the notion of rooms that always come in pairs, such as kitchens and breakfast rooms.
@@ -50,17 +56,17 @@
 
 <h3>4.2.3  Adding Private Rooms</h3>
 
-<p>After steps one and two, the graph has a set of public rooms. Step three randomly places private rooms adjoining public rooms until the private space is filled. Private rooms should only be accessible by means of a public room. The private ruleset in Figure 4 is used to determine what combinations of private rooms are added.</p>
+<p>After steps one and two, the graph has a set of public rooms. Step three randomly places private rooms adjoining public rooms until the private space is filled. (how????) Private rooms should only be accessible by means of a public room. The private ruleset in Figure 4 is used to determine what combinations of private rooms are added.</p>
 
-<p>Some of some of the rules in Figure 4 feature a private room on the right side of the production denoted by the label ‘Priv.’ These nodes function as hallways to private areas and are not expanded out later in the graph generation phase.</p>
+<p>Some of some of the rules in Figure 4 feature a private room on the right side of the production denoted by the label ‘Priv.’ These nodes function as hallways to private areas and are expanded later in the graph expansion phase.</p>
 
 <h3>4.2.4  Adding Stick-on Rooms</h3>
 
-<p>The final step in creating the graph consists of adding a few remaining rooms that are well-suited to being “stuck on” at the last minute, for example closets and pantries. These rooms can be added quickly and without impacting any of the other rooms already in the graph. The statistics system also aids in this step to ensure logical connections.</p>
+<p>The final step in creating the graph consists of adding rooms that are well-suited to being “stuck on” at the last minute, for example closets and pantries. These rooms can be added quickly and without impacting any of the other rooms already in the graph. For example, a pantry can be added to a kitchen without having to change other rooms. The statistics system also aids in this step to ensure logical connections.</p>
 
 <h2>4.3  Graph Expansion</h2>
 
-<p>At the beginning of this step, the types of rooms and the relationships between them have been completely determined. However, the rooms are not located in absolute space. The placement phase distributes the rooms over the footprint. This process treats the graph as a tree with its root at the room that adjoins the front door. From that root, the root’s child nodes are then evenly distributed beneath the root with each child spread an equal distance from other children and an equal distance from the root. The process is then repeated for each of the children nodes.</p>
+<p>At the beginning of this step, the types of rooms and the connections between them have been completely determined. However, the rooms are not located in absolute space. The placement phase distributes the rooms over the footprint. This placement process treats the graph as a tree with its root at the room that adjoins the front door. From that root, the root’s child nodes are then evenly distributed beneath the root with each child spread an equal distance from other children and an equal distance from the root. The process is then repeated for each of the children nodes.</p>
 
 <h3>4.3.1  Complications</h3>
 
@@ -68,18 +74,18 @@
 
 <h3>4.3.2  Expanding Rooms</h3>
 
-<p>Rooms are expanded to their proper size using a Monte Carlo method to choose which room to grow or shrink next. Every room in the graph exerts an outward “pressure” proportionate to the size the room should be relative to other rooms. Walls that are shared between rooms have pressure on them from both sides.</p>
+<p>Rooms are expanded to their proper size (*each room has a relative size assigned to it by the type **Needs to be mentioned earlier) using a Monte Carlo method to choose which room to grow or shrink next. Every room in the graph exerts an outward “pressure” proportionate to the size the room should be relative to other rooms. Walls that are shared between rooms have pressure on them from both sides.</p>
 
-<p>The four walls of the room are examined in turn. The decision of whether to grow or shrink a room by moving a wall is based on the difference between the pressure inside the room pushing out and the sum of the pressures pushing in on that wall from adjacent rooms. If the pressure from the inside is greater than the sum of the pressures from the outside, the room will expand by moving the wall under consideration a fraction of the footprint. If the pressure from outside is greater than that from inside, no expansion takes place.</p>
+<p>The four walls of the room are examined in turn. The decision of whether to grow or shrink a room by moving a wall is based on the difference between the pressure inside the room pushing out and the sum of the pressures pushing in on that wall from adjacent rooms. If the pressure from the inside is greater than the sum of the pressures from the outside, the room will expand by moving the wall under consideration a fraction of the footprint. If the pressure from outside is greater than that from inside, no expansion of that room takes place.</p>
 
 <p>Either of two events can cause a room expansion step to fail:
 
   <ul>
-    <li>If the expansion causes a break in connectivity between rooms.</li>
-    <li>If expansion causes the room to violate its aspect ratio by more than an acceptable tolerance.</li>
+    <li>The expansion causes a break in connectivity between rooms.</li>
+    <li>The expansion causes the room to violate its aspect ratio(** DEFINE ASPECT RATIO) by more than an acceptable tolerance.</li>
   </ul>
 </p>
 
 <h2>4.4  Results</h2>
 
-<p>We implemented our algorithm in Java 1.5, executing the timing trials on a PowerMac G5 Dual 2.0GHz with 1GB of RAM. The application was single-threaded, and so did not use the second processor. We used values for land value and lot size that would produce average houses. Houses in the test runs had between twelve and eighteen rooms, with an average of fifteen. We used 300 iterations of the room expansion phase, observing that for fifteen rooms the expansion step hit equilibrium at about 250 iterations. The timing trial also generated the geometry for each house through the creation of an object file (OBJ format). The algorithm exhibits run time suitable for real-time applications. See below for a sample run of between 1,000 and 50,000 houses.</p>
+<p>We implemented our algorithm in Java 1.5, executing the timing trials on a PowerMac G5 Dual 2.0GHz with 1GB of RAM. The application was single-threaded, and so did not use the second processor. We used values for land value and lot size that would produce average houses(** NEED TO DEFINE LOT SIZE AND LAND VALUE). Houses in the test runs had between twelve and eighteen rooms, with an average of fifteen. We used 300 iterations of the room expansion phase, observing that for fifteen rooms the expansion step hit equilibrium at about 250 iterations. The timing trial also generated the geometry for each house through the creation of an object file (OBJ format). The algorithm exhibits run time suitable for real-time applications. See below for a sample run of between 1,000 and 50,000 houses.</p>
