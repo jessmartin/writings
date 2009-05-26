@@ -1,5 +1,65 @@
-<style type="text/css" media="screen">
-/*  h1 { page-break-before: always; }*/
+<style type="text/css" media="print">
 
+html {
+  font: 10pt/1.26 "Gill Sans", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 { 
+  font-family: "Gill Sans", sans-serif;
+  margin: 2em 0 0.5em 0;
+  page-break-after: avoid;
+  clear: both;
+} 
+
+h1 { 
+  padding: 1em 0 0 0;
+  margin: 0;
+  font-size: 2.4em;
+  font-weight: 900;
+}
+
+h2 { 
+  font-size: 1.2em;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+h3 { 
+  font-size: 1em;
+  font-weight: bold;
+}
+
+div.figure {
+  margin: 1em 0;
+  text-align: center;
+  counter-increment: figure;
+}
+
+div.figure .caption {
+  text-align: center;
+  font-size: 0.9em;
+  margin: 0.2em auto 1.2em auto;
+  page-break-before: avoid;
+}
+
+div.figure .caption::before {
+  content: "Figure " counter(figure) ": ";
+  font-weight: bold;
+}
+
+.prev-figure-ref::after {
+  content: " " counter(figure);
+}
+.next-figure-ref {
+  counter-increment: figure 1;
+}
+.next-figure-ref::after {
+  content: " " counter(figure);
+}
+.figure-decrement {
+  counter-increment: figure -1;
+}
+
+.left { float: left; padding-right: 2em;}
 
 </style>

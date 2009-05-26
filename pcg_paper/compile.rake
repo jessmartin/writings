@@ -1,5 +1,5 @@
 
-new_file = ""
+new_file = "<html><head></head><body>"
 
 IO.foreach("style.html") do |line|
   new_file << line
@@ -11,7 +11,10 @@ end
     IO.foreach(file_name) do |line|
       new_file << line
     end
+    FileUtils.cp_r Dir.glob("chapter#{n}/images/*.png"), 'images'
   end
 end
+
+new_file << "</body></html>"
 
 File.open("index.html", "w") { |file| file.write(new_file) }
