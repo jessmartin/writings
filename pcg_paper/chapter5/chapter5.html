@@ -13,13 +13,13 @@
 <p>The procedure for plot generation has two stages:
 <ul>
   <li>Nested Graph generation</li>
-  <li>Room expansion</li>
+  <li>Graph expansion</li>
 </ul>
 </p>
 
 <h2>5.2  Nested Graph Generation</h2>
 
-<p>The graph structure used to encode a story is a nested graph. Each node of the graph can itself contain another graph. A node that contains another graph indicates that the elements of the graph occur within the node's context. For example, an act could contain a town and a dungeon, the town could then contain an inn and a weapon shop, and the weapon shop could then contain a blacksmith. Connections between nodes indicate reachability or, in other words, the player can move between connected nodes without impediment. If multiple nodes exist at the same level without connections between them it is implied that they are all reachable to one another. (*** NOT CLEAR) Figure 5 represents an example of a common nested graph.</p>
+<p>The graph structure used to encode a story is a nested graph. Each node of the graph can itself contain another graph. A node that contains another graph indicates that the elements of the graph occur within the node's context. For example, an act could contain a town and a dungeon, the town could then contain an inn and a weapon shop, and the weapon shop could then contain a blacksmith. Connections between nodes indicate reachability or, in other words, the player can move between connected nodes without impediment. If multiple nodes exist at the same level without connections between them it is implied that they are all reachable to one another. (*** NOT CLEAR) ***FIGURE*** represents an example of a common nested graph.</p>
 
 <p>Figure 5: A sample nested graph representing a story plot.</p>
 
@@ -85,7 +85,7 @@ Dungeon --> FireDungeon|IceDungeon|EvilCastleDungeon
   </ol>
 </p>
 
-<p>The algorithm produces shapes that resemble the land mass in Figure 6. Land masses are connected by finding the outermost extremity of the shapes and connecting them in accordance with the type of barrier that connects them.</p>
+<p>The algorithm produces shapes that resemble the land mass in ***FIGURE***. Land masses are connected by finding the outermost extremity of the shapes and connecting them in accordance with the type of barrier that connects them.</p>
 
 <h3>5.3.2  Intra-Act Placement</h3>
 

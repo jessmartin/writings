@@ -1,6 +1,10 @@
 
 new_file = ""
 
+IO.foreach("style.html") do |line|
+  new_file << line
+end
+
 1.upto(10) do |n|
   file_name = "chapter#{n}/chapter#{n}.html"
   if File.exists? file_name
