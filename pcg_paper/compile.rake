@@ -1,4 +1,3 @@
-
 new_file = "<html><head></head><body>"
 
 IO.foreach("style.html") do |line|
