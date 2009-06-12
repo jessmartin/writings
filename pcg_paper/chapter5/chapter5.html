@@ -26,7 +26,7 @@
 
 <h3>5.2.1  Acts</h3>
 
-<p>Acts are the outermost nodes of the nested graph that contain other graphs and are represented by the circular nodes in <span class="prev-figure-ref">figure</span>. Each act represents a region where some significant amount of the story will take place. Thus, acts also often contain locations such as towns and dungeons to visit, enemies to fight, non-player characters to interact with, items to acquire, and side quests for optional story development. In order to ensure that the player experiences the plot's development in the proper order, acts are typically separated by barriers. (*** MORE EXPLANATION???)</p>
+<p>Acts are the outermost nodes of the nested graph that contain other graphs and are represented by the circular nodes in <span class="prev-figure-ref">figure</span>. Each act represents a region where some significant amount of the story will take place. Thus, acts also often contain locations such as towns and dungeons to visit, enemies to fight, non-player characters to interact with, items to acquire, and side quests for optional story development. In order to ensure that the player experiences the plot's development in the proper order, acts are typically separated by barriers.</p>
 
 <h3>5.2.2  Barriers</h3>
 
@@ -49,33 +49,32 @@
 
 <h3>5.2.3  Rules</h3>
 
-<p>The rule system controls the generation of the nested graph via a list of simple grammar-based rules of the form A --> B-C|D, where A, B, C, and D are nodes and node A will be filled by either the subgraph of node B connected to node C or the node D. Unlike most grammar-based rule systems, a production rule does not indicate the replacement of the node on the left-hand side, but rather that the right-hand side be nested within the node on the left-hand side. A simple set of default rules are listed below.</p>
+<p>The rule system controls the generation of the nested graph via a list of simple grammar-based rules of the form <pre>A --> B-C | D</pre> where A, B, C, and D are nodes and node A will be filled by either the subgraph of node B connected to node C or the node D. Unlike most grammar-based rule systems, a production rule does not indicate the replacement of the node on the left-hand side, but rather that the right-hand side be nested within the node on the left-hand side. A simple set of default rules are listed in <span class="next-figure-ref">Figure</span><span class="figure-decrement"></span>.</p>
 
 <p>Ultimately, each node represented in the rule system must have some content associated with it in order for the graph expansion algorithm to know how to represent the node when it is expanded into a two-dimensional map.</p>
 
-<p>
-Arc = Start Symbol
-Arc --> SWSIntro-Barrier-SWSAct-Barrier-SWSEnd
-SWSIntro --> Town|Town-Sidequest
-SWSAct --> Town-Dungeon-Sidequest
-SWSEnd --> Town-FinalCastleDungeon-Sidequest|Town-FinalCastleDungeon
-Barrier --> GateBarrier|PortalBarrier|TollRoadBarrier
-GateBarrier --> ItemBarrier|NPCBarrier|SkillBarrier|EnemyBarrier
-PortalBarrier --> 
+<div class="figure">
+  <pre>
+Arc              =  Start Symbol
+Arc             --> Intro-Barrier-Act-Barrier-End
+Intro           --> Town | Town-Sidequest
+Act             --> Town-Dungeon-Sidequest
+End             --> Town-FinalCastleDungeon-Sidequest | Town-FinalCastleDungeon
+Barrier         --> GateBarrier | PortalBarrier | TollRoadBarrier
+GateBarrier     --> ItemBarrier | NPCBarrier | SkillBarrier | EnemyBarrier
+PortalBarrier   --> MountainPass
 TollRoadBarrier --> VehicleBarrier
-ItemBarrier --> SkeletonKeyBR|BrokenBridgeBR
-NPCBarrier --> FortuneTellerBR|TravellingWizardBR|PrincessBR
-EnemyBarrier --> DragonBR|OrcBR
-VehicleBarrier --> ShipBR|ChocoboBR|SnowshoeBR
-SkillBarrier --> FireBR|IceBR|GrowBR
-Sidequest --> Collect10FishSQ|SewerMazeSQ|WaterfallSQ|AlligatorWrestlingSQ
-Town --> DesertTown|LakeTown|MountainTown
-DesertTown --> NPC*
-LakeTown --> NPC*
-MountainTown --> NPC*
-Dungeon --> FireDungeon|IceDungeon|EvilCastleDungeon
-</p>
-<!-- Make into a figure and put in an appendix -->
+ItemBarrier     --> SkeletonKey | BrokenBridge
+NPCBarrier      --> FortuneTeller | TravellingWizard | Princess
+EnemyBarrier    --> Dragon | Orc
+VehicleBarrier  --> Ship | Chocobo | Snowshoe
+SkillBarrier    --> Fire | Ice | Grow
+Sidequest       --> Collect10FishSQ | SewerMazeSQ | WaterfallSQ | AlligatorWrestlingSQ
+Town            --> DesertTown | LakeTown | MountainTown
+Dungeon         --> FireDungeon | IceDungeon | EvilCastleDungeon
+  </pre>
+  <div class="caption">A sample ruleset for generating a nested graph.</div>
+</div>
 
 <h2>5.3  Graph Expansion</h2>
 
@@ -92,7 +91,12 @@ Dungeon --> FireDungeon|IceDungeon|EvilCastleDungeon
   </ol>
 </p>
 
-<p>The algorithm produces shapes that resemble the land mass in ***FIGURE***. Land masses are connected by finding the outermost extremity of the shapes and connecting them in accordance with the type of barrier that connects them.</p>
+<div class="figure">
+  <img src="images/land_masses.jpg" />
+  <div class="caption">An example of an act region generated via overlapping shapes.</div>
+</div>
+
+<p>The algorithm produces shapes that resemble the land mass in <span class="prev-figure-ref">figure</span>. Land masses are connected by finding the outermost extremity of the shapes and connecting them in accordance with the type of barrier that connects them.</p>
 
 <h3>5.3.2  Intra-Act Placement</h3>
 

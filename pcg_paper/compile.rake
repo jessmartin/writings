@@ -11,6 +11,7 @@ end
       new_file << line
     end
     FileUtils.cp_r Dir.glob("chapter#{n}/images/*.png"), 'images'
+    FileUtils.cp_r Dir.glob("chapter#{n}/images/*.jpg"), 'images'
   end
 end
 
