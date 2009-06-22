@@ -2,7 +2,7 @@
 
 <p>To date, procedural methods for creating buildings have produced buildings that are merely textured facades, containing no internal structure. Also, most algorithms do not draw upon insights from architecture. We introduce a method for procedurally generating a single-family residential unit, a house, automatically. The first step in generating the house uses a grammar which constructs a graph of the rooms and connections between rooms. The rules of the grammar are based on insights gleaned from particular architectural styles. Consequently, the algorithm is capable of producing houses in the style from which the rules are drawn. During the second step, rooms reach their appropriate sizes using Monte Carlo semi-deformable growth.</p>
 
-<p>Our method of building generation is fundamentally different from methods previously discussed. While most methods generate only exteriors of buildings with no interior structure or layout, our method focuses on the floorplan with the assumption that the floorplan will eventually dictate most of the exterior appearance. Most other methods focus primarily on commercial buildings–office buildings, skyscrapers, and other large, fairly regular buildings. In exploring the problem of procedurally generated buildings, we found residential buildings to be highly complex due to their variety and irregularity and chose them as the target for our new method.</p>
+<p>Our method of building generation is fundamentally different from methods previously discussed. While most methods generate only exteriors of buildings with no interior structure or layout, our method focuses on the floorplan with the assumption that the floorplan will eventually dictate most of the exterior appearance. Most other methods focus primarily on commercial buildings, e.g. office buildings, skyscrapers, and other large, fairly regular buildings. In exploring the problem of procedurally generated buildings, we found residential buildings to be highly complex due to their variety and irregularity and chose them as the target for our new method.</p>
 
 <h2>4.1 Algorithm Principles</h2>
 
@@ -38,6 +38,8 @@
 <p>We represent the basic structure of a house as a graph with each node corresponding to a room and each edge corresponding to a connection between rooms. In the first step of the procedure, a graph encoding of rooms is generated. The graph generation phase itself occurs in four steps, as seen in <span class="prev-figure-ref">figure</span>.</p>
 
 <p>Two techniques are used in the graph generation phase: a context-free grammar and a user-defined ruleset. We found grammars to be appropriate for "growing" the structure of the graphs, but they are ill-suited to capture the semantics of the graph. To account for the semantics, we used a ruleset to maintain both local and global information about rooms in the graph.</p>
+
+<p>Each step itself consists of multiple iterations. An iteration involves selecting a node from the existing graph and replacing it according to rules in the context-free grammar. A step terminates when adding another room would exceed the public or private square footage available as determined by the footprint size and the public to private square footage ratio previously mentioned.</p>
 
 <h3>4.2.1  Adding Public Rooms</h3>
 
@@ -77,7 +79,7 @@
 
 <p>After steps one and two, the graph has a set of public rooms. Step three randomly places private rooms adjoining public rooms until the private space is filled. The private space is considered filled when the square footage allotted to private rooms has been exhausted. Private rooms should only be accessible by means of a public room. The private ruleset in <span class="prev-figure-ref">figure</span> is used to determine what combinations of private rooms are added.</p>
 
-<p>Some of some of the rules in <span class="prev-figure-ref">figure</span> feature a private room on the right side of the production denoted by the label 'Priv.' These nodes function as hallways to private areas and are expanded later in the graph expansion phase.</p>
+<p>Some of the rules in <span class="prev-figure-ref">figure</span> feature a private room on the right side of the production denoted by the label 'Priv.' These nodes function as hallways to private areas and are expanded later in the graph expansion phase.</p>
 
 <h3>4.2.4  Adding Stick-on Rooms</h3>
 
@@ -105,7 +107,7 @@
 
 <h3>4.3.2  Expanding Rooms</h3>
 
-<p>Rooms are expanded to their proper size relative to one another using a Monte Carlo method to choose which room to grow or shrink next. Every room in the graph exerts an outward "pressure" proportionate to the size the room should be relative to other rooms. Walls that are shared between rooms have pressure on them from both sides.</p>
+<p>Rooms are expanded to their proper size relative to one another using a Monte Carlo method to choose which room to grow next. Every room in the graph exerts an outward "pressure" proportionate to the size the room should be relative to other rooms. Walls that are shared between rooms have pressure on them from both sides.</p>
 
 <div class="figure">
   <img src="images/room_expansion.png" />
@@ -129,7 +131,7 @@
 
 <h2>4.4  Results</h2>
 
-<p>We implemented our algorithm in Java 1.5, executing the timing trials on a PowerMac G5 Dual 2.0GHz with 1GB of RAM. The application was single-threaded, and so did not use the second processor. Houses in the test runs had between twelve and eighteen rooms, with an average of fifteen. We used 300 iterations of the room expansion phase, observing that for fifteen rooms the expansion step hit equilibrium at about 250 iterations. The timing trial also generated the geometry for each house through the creation of an object file (OBJ format). The algorithm exhibits run time suitable for real-time applications. See <span class="next-figure-ref">figure</span><span class="figure-decrement"></span> for a sample run of between 1,000 and 50,000 houses.</p>
+<p>We implemented our algorithm in Java 1.5, executing the timing trials on a PowerMac G5 Dual 2.0GHz with 1GB of RAM. The application was single-threaded, and so did not use the second processor. Houses in the test runs had between twelve and eighteen rooms, with an average of fifteen. We used 300 iterations of the room expansion phase, observing that for fifteen rooms the expansion step hit equilibrium at about 250 iterations. The timing trial also generated the geometry for each house through the creation of an object file (OBJ format). The algorithm exhibits run time suitable for real-time applications. As an example, in a virtual environment, any houses near the user would be generated in a few seconds while houses farther away would be generated in the background and would exist by the time the user got there. See <span class="next-figure-ref">figure</span><span class="figure-decrement"></span> for a sample run of between 1,000 and 50,000 houses.</p>
 
 <div class="figure">
   <img src="images/timing.png" />
