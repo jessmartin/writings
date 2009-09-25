@@ -1,3 +1,5 @@
+!SLIDE
+
 # Define all your styles in one place #
 
 * Only use one file for all styles for the screen content type (call it screen.css)
@@ -5,6 +7,7 @@
 ** Have an additional stylesheet only if you need to support IE6
 ** Additional file for print media type (call it print.css)
 
+!SLIDE
 
 * CSS document should be ordered according to localizing the styles for a specific element, in the following order:
 ** Reset all styles
@@ -15,11 +18,15 @@
 *** Footer styles
 ** Use comments to call out blocks of related styles within a section (subsection)
 
+!SLIDE
+
 # Never (almost) put CSS directly on HTML elements #
 
 * Differing stylesheets (screen, print, mobile) can't override the style
 * JavaScript may blow away the style naively
 * Violates rule one (Define all your styles in one place)
+
+!SLIDE
 
 # Only use tables for TABULAR data
 
@@ -27,15 +34,24 @@
 ** Tabular data does not CONTAIN other tabular data. If it does, your information is too complex and losing your user.
 ** Negative example: 
 
+@@@ css
+.wideTable td#tabInfo table table.stripe th {}
+@@@
+
+!SLIDE
+
 # Avoid creating DIVs (or any extra elements) simply for the sake of styling
 
 * Only use DIVs for logical grouping of elements that have some corresponding visual appearance
     
+!SLIDE
+
 # Indent Properly
 
 * Break lines after about 100 characters
 * Indent once for each nested tag and each Ruby block (in erb)
 
+@@@ rhtml
 <html>
   <head>
     <title></title>
@@ -51,10 +67,15 @@
     <% end >
   </body>
 </html>
+@@@
+
+!SLIDE
 
 # Favor Absolute Position Over Float Layouts
 
 * With the exception of columnar layout.  Can't use absolute position layouts to create columns.
+
+!SLIDE
 
 # Create a separate override stylesheet when changing global styles for plugins, etc
 
@@ -63,10 +84,14 @@ You wouldn't directly edit a Rails plugin because it makes it impossible to upgr
 * Include it *after* the plugin.css file
 * Override only the specific styles that need to be overridden GLOBALLY. If you need to override a style in only one place, put that in your main stylesheet next to the other styles governing that area of the page.
 
+!SLIDE
+
 # Forms #
 
 * Formtastic!
 http://www.slideshare.net/AaronGustafson/learning-to-love-forms-web-directions-south-07
+
+!SLIDE
 
 # Use CSS Selectors To Limit Scope #
 
@@ -76,13 +101,19 @@ They work in IE 7 & 8, Firefox and Safari.
 * + The adjacent sibling selector 
 * ~ The general sibling selector 
     
+!SLIDE
+
 # Favor dashes over underscores in class and id names #
+
+!SLIDE
 
 # CSS Style Contracted vs Expanded #
 
 It's really a matter of taste.
 My textmate bundle for switching back and forth.
     
+!SLIDE
+
 # Miscellaneous Tips
 
 * Store common colors in hex at the top of the CSS file for easy reference and TextMate autocompletion
