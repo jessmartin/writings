@@ -4874,9 +4874,8 @@ jQuery.extend( jQuery.easing,
           <div class="">
             <div id="slide-2" class="content">
               <h1>Structure your CSS properly</h1>
-<p>CSS document should be ordered according to localizing the styles for a specific element, in the following order:</p>
+<p>The CSS should be ordered in the following order for easy browsing:</p>
 <ul>
-<li>Reset all styles</li>
 <li>Sensible application-wide defaults for standard HTML tags (i.e, body, headers, links, etc)</li>
 <li>Styles by section:
 
@@ -4901,6 +4900,7 @@ jQuery.extend( jQuery.easing,
 
   <span class="nf">#content</span> <span class="p">{</span> <span class="k">margin</span><span class="o">:</span> <span class="m">0</span> <span class="k">auto</span><span class="p">;</span> <span class="k">width</span><span class="o">:</span> <span class="m">600px</span><span class="p">;</span> <span class="p">}</span>
 
+  <span class="c">/* Signup page styles */</span>
   <span class="nc">.signup</span> <span class="nc">.sidebar</span> <span class="nt">h2</span> <span class="p">{</span> <span class="k">font-size</span><span class="o">:</span> <span class="m">2em</span><span class="p">;</span> <span class="k">color</span><span class="o">:</span> <span class="nb">red</span><span class="p">;</span> <span class="p">}</span>
   <span class="nc">.signup</span> <span class="nc">.sidebar</span> <span class="nt">p</span> <span class="p">{</span> <span class="k">line-height</span><span class="o">:</span> <span class="m">1.8em</span><span class="p">;</span> <span class="p">}</span>
 
@@ -4913,9 +4913,9 @@ jQuery.extend( jQuery.easing,
             <div id="slide-4" class="content">
               <h1>Never (almost) put CSS directly on HTML elements</h1>
 <ul>
-<li>Differing stylesheets (screen, print, mobile) can't override the style</li>
+<li>Stylesheets (screen, print, mobile) can't override the style</li>
 <li>JavaScript may blow away the style naively</li>
-<li>Violates rule one (Define all your styles in one place)</li>
+<li>Violates "Define all your styles in one place" rule</li>
 </ul>
             </div>
           </div>
@@ -4930,6 +4930,10 @@ jQuery.extend( jQuery.easing,
 <p>Negative example:</p>
 
 <div class="highlight css code highlight"><pre><span class="nc">.wideTable</span> <span class="nt">td</span><span class="nf">#tabInfo</span> <span class="nt">table</span> <span class="nt">table</span><span class="nc">.stripe</span> <span class="nt">th</span> <span class="p">{}</span>
+
+
+
+<span class="nt">Jason</span> <span class="nt">Long</span> <span class="nt">caveat</span><span class="o">:</span> <span class="nt">Sometimes</span> <span class="nt">it</span><span class="err">'</span><span class="nt">s</span> <span class="nt">quicker</span> <span class="nt">to</span> <span class="nt">use</span> <span class="nt">tables</span> <span class="nt">for</span> <span class="nt">styling</span> <span class="nt">grids</span><span class="o">.</span>
 </pre></div>
 </li>
 </ul>
@@ -4986,6 +4990,7 @@ jQuery.extend( jQuery.easing,
               <h1>Favor Absolute Position Over Float Layouts</h1>
 <ul>
 <li>With the exception of columnar layout.  Can't use absolute position layouts to create columns.</li>
+<li>Caveat: I'm still experimenting with this. Ping me if you're interested.</li>
 </ul>
             </div>
           </div>
@@ -4995,10 +5000,10 @@ jQuery.extend( jQuery.easing,
               <h1>Use an override stylesheet when changing styles for plugins, etc</h1>
 <p>You wouldn't directly edit a Rails plugin because it makes it impossible to upgrade the plugin. Think of CSS (and Javascript) in the same way.</p>
 <ul>
-<li>Create an plugin_override.css file</li>
+<li>Create a plugin_override.css file</li>
 <li>Include it <em>after</em> the plugin.css file</li>
-<li>Override only the specific styles that need to be overridden GLOBALLY.</li>
-<li>If you need to override a style in only one place, put that in your main stylesheet next to the other styles governing that area of the page.</li>
+<li>Override only the specific styles that need to be overridden GLOBALLY</li>
+<li>If you need to override a style in only one place, put that in your main stylesheet next to the other styles governing that area of the page</li>
 </ul>
             </div>
           </div>
@@ -5008,7 +5013,7 @@ jQuery.extend( jQuery.easing,
               <h1>Forms</h1>
 <ul>
 <li><p>Formtastic! 'nuff said.</p></li>
-<li><p>Most of the opinions on how to style forms comes from:
+<li><p>Most of Formtastic's opinions on how to style forms comes from:
 http://www.slideshare.net/AaronGustafson/learning-to-love-forms-web-directions-south-07</p></li>
 </ul>
             </div>
@@ -5029,31 +5034,83 @@ http://www.slideshare.net/AaronGustafson/learning-to-love-forms-web-directions-s
             </div>
           </div>
         
-          <div class="">
+          <div class="
+ 
+ 
+     ">
             <div id="slide-13" class="content">
-              <h1>Favor dashes over underscores in class and id names</h1>
+              
             </div>
           </div>
         
           <div class="">
             <div id="slide-14" class="content">
-              <h1>CSS Style Contracted vs Expanded</h1>
-<p>It's really a matter of taste.
-My textmate bundle for switching back and forth.</p>
+              <h1>Dashes or underscores in class and id names?</h1>
+<ul>
+<li>Toss-up. Follow the style of the project. Be consistent.</li>
+<li>Jason Long: underscores</li>
+<li>Jess: neutral</li>
+<li>Larry: dashes</li>
+</ul>
             </div>
           </div>
         
           <div class="">
             <div id="slide-15" class="content">
+              <h1>CSS Style Contracted vs Expanded</h1>
+<p>It's really a matter of taste.</p>
+<p>Use my textmate bundle for switching back and forth.</p>
+<p>An example...</p>
+            </div>
+          </div>
+        
+          <div class="">
+            <div id="slide-16" class="content">
+              <h1>Expanded Style</h1>
+<div class="highlight css code highlight"><pre><span class="nt">ul</span><span class="nc">.tickets.mine</span> <span class="nt">li</span> <span class="nt">span</span><span class="nc">.ticket_stats</span><span class="o">,</span>
+<span class="nt">ul</span><span class="nc">.tickets.mine</span> <span class="nt">span</span><span class="nc">.customer</span> <span class="p">{</span>
+  <span class="k">color</span><span class="o">:</span> <span class="m">#7b7d60</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.tickets</span> <span class="nt">span</span><span class="nc">.ticket_status</span> <span class="p">{</span>
+  <span class="k">display</span><span class="o">:</span> <span class="k">block</span><span class="p">;</span>
+  <span class="k">margin-bottom</span><span class="o">:</span> <span class="m">0.6em</span><span class="p">;</span>
+  <span class="k">font-weight</span><span class="o">:</span> <span class="k">bold</span><span class="p">;</span>
+  <span class="k">font-size</span><span class="o">:</span> <span class="m">12px</span><span class="p">;</span>
+  <span class="k">color</span><span class="o">:</span> <span class="m">#333</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+            </div>
+          </div>
+        
+          <div class="">
+            <div id="slide-17" class="content">
+              <h1>Contracted Style</h1>
+<div class="highlight css code highlight"><pre><span class="nt">ul</span><span class="nc">.tickets.mine</span> <span class="nt">li</span> <span class="nt">span</span><span class="nc">.ticket_stats</span><span class="o">,</span>
+<span class="nt">ul</span><span class="nc">.tickets.mine</span> <span class="nt">span</span><span class="nc">.customer</span> <span class="p">{</span> <span class="k">color</span><span class="o">:</span> <span class="m">#7b7d60</span><span class="p">;</span> <span class="p">}</span>
+<span class="nc">.tickets</span> <span class="nt">span</span><span class="nc">.ticket_status</span> <span class="p">{</span> <span class="k">display</span><span class="o">:</span> <span class="k">block</span><span class="p">;</span> <span class="k">margin-bottom</span><span class="o">:</span> <span class="m">0.6em</span><span class="p">;</span> <span class="k">font-weight</span><span class="o">:</span> <span class="k">bold</span><span class="p">;</span> <span class="k">font-size</span><span class="o">:</span> <span class="m">12px</span><span class="p">;</span> <span class="k">color</span><span class="o">:</span> <span class="m">#333</span><span class="p">;</span> <span class="p">}</span>
+</pre></div>
+            </div>
+          </div>
+        
+          <div class="">
+            <div id="slide-18" class="content">
+              <h1>Insert the controller and action classes on the body element for page specific styling</h1>
+<p>Put this in a helper method.</p>
+<div class="highlight html code highlight"><pre>  <span class="nt">&lt;body</span> <span class="na">class=</span><span class="s">"&lt;%= controller.controller_name %&gt;</span>
+<span class="s">               &lt;%= controller.action_name %&gt;"</span><span class="nt">&gt;</span>
+</pre></div>
+            </div>
+          </div>
+        
+          <div class="">
+            <div id="slide-19" class="content">
               <h1>Miscellaneous Tips</h1>
 <ul>
 <li>Store common colors in hex at the top of the CSS file for easy reference and TextMate autocompletion</li>
 <li>Use firebug Inspect to locate similar elements in the CSS file</li>
 <li>Use firebug Inspect to locate the exact line in the CSS where the rule occurs</li>
-<li>Insert the controller and action classes on the body element for page specific styling</li>
 </ul>
-<div class="highlight html code highlight"><pre>  <span class="nt">&lt;body</span> <span class="na">class=</span><span class="s">"&lt;%= params[:controller] %&gt; &lt;%= params[:action] %&gt;"</span><span class="nt">&gt;</span>
-</pre></div>
             </div>
           </div>
         

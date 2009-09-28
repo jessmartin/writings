@@ -17,9 +17,8 @@
 
 # Structure your CSS properly
 
-CSS document should be ordered according to localizing the styles for a specific element, in the following order:
+The CSS should be ordered in the following order for easy browsing:
 
-* Reset all styles
 * Sensible application-wide defaults for standard HTML tags (i.e, body, headers, links, etc)
 * Styles by section:
   * Header styles
@@ -38,6 +37,7 @@ CSS document should be ordered according to localizing the styles for a specific
 
   #content { margin: 0 auto; width: 600px; }
 
+  `/* Signup page styles */`
   .signup .sidebar h2 { font-size: 2em; color: red; }
   .signup .sidebar p { line-height: 1.8em; }
 
@@ -48,9 +48,9 @@ CSS document should be ordered according to localizing the styles for a specific
 
 # Never (almost) put CSS directly on HTML elements #
 
-* Differing stylesheets (screen, print, mobile) can't override the style
+* Stylesheets (screen, print, mobile) can't override the style
 * JavaScript may blow away the style naively
-* Violates rule one (Define all your styles in one place)
+* Violates "Define all your styles in one place" rule
 
 !SLIDE
 
@@ -63,6 +63,8 @@ If you have tables nested inside of tables *YER DOING IT WRONG*.
 
     @@@ css
     .wideTable td#tabInfo table table.stripe th {}
+
+Jason Long caveat: Sometimes it's quicker to use tables for styling grids.
 
 !SLIDE
 
@@ -104,6 +106,7 @@ If you have tables nested inside of tables *YER DOING IT WRONG*.
 # Favor Absolute Position Over Float Layouts
 
 * With the exception of columnar layout.  Can't use absolute position layouts to create columns.
+* Caveat: I'm still experimenting with this. Ping me if you're interested.
 
 !SLIDE
 
@@ -111,10 +114,10 @@ If you have tables nested inside of tables *YER DOING IT WRONG*.
 
 You wouldn't directly edit a Rails plugin because it makes it impossible to upgrade the plugin. Think of CSS (and Javascript) in the same way.
 
-* Create an plugin_override.css file
+* Create a plugin_override.css file
 * Include it *after* the plugin.css file
-* Override only the specific styles that need to be overridden GLOBALLY. 
-* If you need to override a style in only one place, put that in your main stylesheet next to the other styles governing that area of the page.
+* Override only the specific styles that need to be overridden GLOBALLY
+* If you need to override a style in only one place, put that in your main stylesheet next to the other styles governing that area of the page
 
 !SLIDE
 
@@ -122,7 +125,7 @@ You wouldn't directly edit a Rails plugin because it makes it impossible to upgr
 
 * Formtastic! 'nuff said.
 
-* Most of the opinions on how to style forms comes from:
+* Most of Formtastic's opinions on how to style forms comes from:
 http://www.slideshare.net/AaronGustafson/learning-to-love-forms-web-directions-south-07
 
 !SLIDE
@@ -134,17 +137,69 @@ They work in IE 7 & 8, Firefox and Safari.
   * __`>`__ The child selector 
   * __`+`__ The adjacent sibling selector 
   * __`~`__ The general sibling selector 
+
+!SLIDE
+
+
     
 !SLIDE
 
-# Favor dashes over underscores in class and id names #
+# Dashes or underscores in class and id names? #
+
+* Toss-up. Follow the style of the project. Be consistent.
+* Jason Long: underscores
+* Jess: neutral
+* Larry: dashes
 
 !SLIDE
 
 # CSS Style Contracted vs Expanded #
 
 It's really a matter of taste.
-My textmate bundle for switching back and forth.
+
+Use my textmate bundle for switching back and forth.
+
+An example...
+
+!SLIDE
+
+# Expanded Style
+
+@@@ css
+    ul.tickets.mine li span.ticket_stats,
+    ul.tickets.mine span.customer {
+      color: #7b7d60;
+    }
+
+    .tickets span.ticket_status {
+      display: block;
+      margin-bottom: 0.6em;
+      font-weight: bold;
+      font-size: 12px;
+      color: #333;
+    }
+@@@
+
+!SLIDE
+
+# Contracted Style
+
+@@@ css
+ul.tickets.mine li span.ticket_stats,
+ul.tickets.mine span.customer { color: #7b7d60; }
+.tickets span.ticket_status { display: block; margin-bottom: 0.6em; font-weight: bold; font-size: 12px; color: #333; }
+@@@
+
+!SLIDE
+
+# Insert the controller and action classes on the body element for page specific styling
+  
+Put this in a helper method.
+
+@@@ html
+  `<body class="<%= controller.controller_name %> `
+  `              <%= controller.action_name %>">`
+@@@
     
 !SLIDE
 
@@ -153,8 +208,5 @@ My textmate bundle for switching back and forth.
 * Store common colors in hex at the top of the CSS file for easy reference and TextMate autocompletion
 * Use firebug Inspect to locate similar elements in the CSS file
 * Use firebug Inspect to locate the exact line in the CSS where the rule occurs
-* Insert the controller and action classes on the body element for page specific styling
-  
-@@@ html
-  `<body class="<%= params[:controller] %> <%= params[:action] %>">`
-@@@
+
+
