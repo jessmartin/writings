@@ -1,0 +1,198 @@
+!SLIDE
+
+# Learn to speak interface
+## Conversation between developers and designers
+
+!SLIDE
+
+<pre style="display:none">
+  PRESENT THE PROBLEM CLEARLY
+
+  We build web applications.
+
+  How many of you are designers?
+
+  How many of you are developers?
+
+  How many of you are both?
+  
+  So you have to CROSS THE AISLE sometimes, right?
+  
+  How familiar is this conversation:
+    *crickets*
+</pre>
+
+!SLIDE
+
+# Software is for people
+
+<pre style="display:none">
+  How many of you build software?
+  
+  We build software for people to USE.
+</pre>
+
+!SLIDE
+
+# Usability
+# The intersection of form and function
+
+!SLIDE
+
+# Meet Michael.
+## Michael is a designer.
+## Michael wants it to be beautiful.
+## FORM
+
+!SLIDE
+
+# Meet Jon.
+## Jon is a developer.
+## Jon wants it to work.
+## FUNCTION
+
+!SLIDE
+
+# How to get Michael and Jon on the same page?
+
+!SLIDE
+
+# Three Questions
+
+* WHO is the user?
+* WHAT is the action?
+* WHAT is the most important thing on the page?
+
+<pre style="display:none">
+  These questions can seed the conversation.
+  
+  Get the party started.
+</pre>
+
+!SLIDE
+
+# WHO is the user?
+
+<pre style="display:none">
+  We build software for people, remember?
+  
+  We need to understand who we are going to be building the application for.
+  
+  What questions can we ask?
+  
+  Here are a few lightweight exercises to help you understand your user.
+</pre>
+
+!SLIDE
+
+# A day in the life of a user
+
+<pre style="display:none">
+  Empathy.
+  
+  When would they use your application?
+  
+  At lunch, at work, on their break, at a desk, on a plane?
+</pre>
+
+!SLIDE
+
+# Motivation
+
+<pre style="display:none">
+  Does the user actually like your app?
+  
+  What problem does your app solve for your user?
+</pre>
+
+!SLIDE
+
+# WHAT is the next action?
+
+# WHY are they here?
+
+<pre style="display:none">
+  Users have an objective for using the site.
+  
+  What are you helping them accomplish?
+</pre>
+
+!SLIDE
+
+# Back-seat driver
+
+<pre style="display:none">
+  Imagine the scenario of showing the application to someone, your mom or your significant other. etc....
+    
+  If you were watching over their shoulder, what would you tell them to click on next?
+    (I *KNOW* you wouldn't take their mouse away. That's just mean. Let them do it.)
+    
+  Call it out.
+</pre>
+
+!SLIDE
+
+# Cotton-eyed joe
+## (Where did ya come from, where did ya go?)
+
+<pre style="display:none">
+  What's the flow? They started somewhere, now they're here, where to next?
+  
+  Write it down. One. Two. Three. This page is step two of three, generally. So point them to Step Three.
+</pre>
+
+!SLIDE
+
+# WHAT is the most important thing on the page?
+
+<pre style="display:none">
+  You know who your user is. You know what's up next.
+  
+  So now you're ready to prioritize for the user:
+  
+  "Every page should have a priority"
+</pre>
+
+!SLIDE
+
+# Every page should have a priority
+
+!SLIDE
+
+# MVP test
+
+<pre style="display:none">
+  What should be most prominent to the user?
+  
+  What's the first thing the user should notice?
+  
+  Second?
+  
+  Third?
+  
+  No more than three!
+</pre>
+
+!SLIDE
+
+# Squint test
+
+<pre style="display:none">
+  Look at your page and squint. Does the MVP stand out? If not, may need to redesign.
+</pre>
+
+!SLIDE
+
+# Font size test
+
+<pre style="display:none">
+  Think headlines.
+</pre>
+
+!SLIDE
+
+
+
+!SLIDE
+
+# Questions?
