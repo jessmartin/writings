@@ -2,8 +2,12 @@
 
 # Learn to speak interface
 ## Conversation between developers and designers
+<br/><br/>
+### Jess Martin
 
 !SLIDE
+
+# Let's talk.
 
 <pre style="display:none">
   PRESENT THE PROBLEM CLEARLY
@@ -24,7 +28,7 @@
 
 !SLIDE
 
-# Software is for people
+<img src="software_is_for_people.jpg" width="1000px" />
 
 <pre style="display:none">
   How many of you build software?
@@ -34,26 +38,57 @@
 
 !SLIDE
 
-# Usability
-# The intersection of form and function
+# Let's build together.
 
 !SLIDE
 
 # Meet Michael.
-## Michael is a designer.
-## Michael wants it to be beautiful.
-## FORM
+
+!SLIDE
+
+<img src="designer.jpg" width="1000px" />
+
+!SLIDE 
+
+# Michael is a designer.
+
+!SLIDE
+
+# Michael wants it to be beautiful.
+
+!SLIDE
+
+# FORM
 
 !SLIDE
 
 # Meet Jon.
-## Jon is a developer.
-## Jon wants it to work.
-## FUNCTION
 
 !SLIDE
 
-# How to get Michael and Jon on the same page?
+<img src="developer_dream.jpg" height="800px" />
+
+!SLIDE
+
+# Jon is a developer.
+
+!SLIDE
+
+<img src="developer_real.jpg" width="1000px" />
+
+!SLIDE
+
+# Jon wants it to work.
+
+!SLIDE
+
+# FUNCTION
+
+!SLIDE
+
+<img src="usability.jpg" width="1000px" />
+<br/><br/>
+## How to get Michael and Jon on the same page?
 
 !SLIDE
 
@@ -97,7 +132,7 @@
 
 !SLIDE
 
-# Motivation
+# You gotta wanna
 
 <pre style="display:none">
   Does the user actually like your app?
@@ -109,6 +144,8 @@
 
 # WHAT is the next action?
 
+!SLIDE
+
 # WHY are they here?
 
 <pre style="display:none">
@@ -116,6 +153,10 @@
   
   What are you helping them accomplish?
 </pre>
+
+!SLIDE
+
+<img src="page_purpose_priority.png" width="1000px" />
 
 !SLIDE
 
@@ -155,7 +196,7 @@
 
 !SLIDE
 
-# Every page should have a priority
+<img src="page_purpose_priority.png" width="1000px" />
 
 !SLIDE
 
@@ -191,8 +232,28 @@
 
 !SLIDE
 
+# WHO is the user?
+* Day in the life...
+* Gotta wanna
 
+<br/><br/>
+
+# WHAT is the next action?
+* Back-seat driver
+* Cotton-eyed joe
+
+<br/><br/>
+
+# WHAT is most important?
+* MVP test
+* Squint test
+* Font-size test
 
 !SLIDE
 
 # Questions?
+
+<br/>
+<br/>
+
+Reference sheet for exercises available at: http://github.com/jessmartin
