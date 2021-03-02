@@ -1,64 +1,76 @@
 # The End of Paper
 
 <picture of my moleskin collection>
-Over the last thirteen years, I've filled twenty-six Moleskines from cover to cover. Within a few minutes of laying my hands on the reMarkable tablet, I knew I'd never buy another paper notebook. It's that good.
+Over the last thirteen years, I've filled twenty-six Moleskines from cover to cover. Yet within a few minutes of laying hands on the reMarkable tablet, I knew I'd never buy another paper notebook. It's just _that good_.
 
 How was I convinced to abandon a decade-old allegiance to analog in under ten minutes? Well, let's just say the reMarkable tablet is aptly named.
 
-Before I recount my reMarkable experience, we'll linger on my long love affair with paper. Then I'll describe the "analog-digital divide" in my daily workflows and some of the attempts I've made to bridge that gap. Finally, I'll talk about what's great about reMarkable, and what I'm looking forward to in the future.
+Before I recount my reMarkable experience, I'll linger on my long love affair with paper. Then I'll describe the "analog-digital divide" in my daily workflows and some of the attempts I've made to bridge that gap. Finally, I'll talk about what's great about reMarkable, and what I'm looking forward to in the future.
+
+Let's jump in.
 
 ## My love affair with paper
 
 <photo of my stacks of moleskines>
-The first dated entry I could find from one of my notebooks is April 4, 2000–my eighteenth birthday. The writings began as the overwrought ramblings of a passionate high schooler. During [undergrad](http://cs.trinity.edu/) and [grad school](https://cs.unc.edu/), I continued to write haphazardly, not really establishing a structured habit for my usage of paper.
+The first dated entry I could find from one of my paper notebooks is April 4, 2000: my eighteenth birthday. The writings began as the overwrought ramblings of a passionate high schooler. Throughout [undergrad](http://cs.trinity.edu/) and [grad school](https://cs.unc.edu/), I continued to write frequently but haphazardly, not really establishing a structured habit for my usage of paper.
 
-Beginning in 2007, I got serious. I carried a paper notebook with me everywhere. And I mean everywhere. I started my day by cracking it open, carried it to all my meetings, lunches, church, travel, everywhere. Notebook-carrying became such a fixture of my identity that by 2010 the write-everything-down habit was hilariously caricatured by a friend using a 3 foot by 4 foot cardboard notebook, acting out me writing down every word while on a date with my wife.
+But beginning in 2007, I got serious. I carried a paper notebook with me everywhere. And I mean everywhere. I started my day by cracking it open, carried it to all my meetings, lunches, church, travel, everywhere. Notebook-carrying became such a fixture of my identity that by 2010 the write-everything-down habit was hilariously caricatured by a friend in a roast: he acted out me on a date with my wife, studiously hunched over a 3 foot by 4 foot cardboard notebook, writing down every word of our romantic conversation.
 
 <photo of Eric with a "paper notebook">
 
-I wrote nearly every day. And my system evolved over time. What began as a single all-purpose notebook became two specialized notebooks: a daily working log and a long-form journal. I experimented with different formatting techniques for pages, dabbling in a variety of paper-based GTD systems. I tried out different notebook form factors: soft cover, hard cover, small, medium, large, lined, unlined, grid. I scribbled my way through sheafs of dead tree matter.
+I wrote nearly every day. And my system evolved over time. What began as a single all-purpose notebook became two specialized notebooks: a daily working log and a long-form journal. I experimented with different formatting techniques for pages and dabbled in a variety of paper-based GTD systems. I tried out different form factors: soft cover, hard cover, small, medium, large, lined, unlined, grid. I scribbled my way through sheafs of dead trees.
 
 And I loved it.
 
-I loved starting a new day with a fresh page, noting the day's date, and opening myself to the possibilities in front of me. I loved dedicating time to look back on life, sorting through emotions, churning thought-trains, and half-made plans. From brain to hand to pen, the ink flowing onto the page created a black-and-beige clarity that seemed more difficult when staring at a glowing rectangle or typing at a keyboard.
+There was no better start to a day than turning to a fresh page, noting the day's date, and opening myself to the possibilities in front of me. I loved dedicating time to look back on life, sorting through emotions, churning thought-trains, and half-made plans. From brain to hand to pen, the ink flowing onto the page created a black-and-beige clarity that seemed more difficult when staring at a glowing rectangle or typing at a keyboard.
 
-All that's to say, I was and am still deeply in love with paper. But not paper for paper's sake, but rather what paper enables: the medium of paper allows my thoughts to flow freely, concretize, take on shape and form, to sing.
+All that's to say, I was and am still deeply in love with paper. But, not paper for paper's sake, but rather what paper has enabled: the medium allows my thoughts to flow freely, concretize, take on shape and form; to sing.
 
 ## A dalliance with digital
 
-As wonderful as paper had been to me, as a digital native, I was constantly aware of the tradeoff I was making: digital has its advantages.
+Perhaps unlike many notebook aficionados, I have always been a digital native. So while the evolution of my pen and paper system was extensive, it isn't the full story.
 
-I got my first job as a software developer in 2003. Which means I type a lot. My keyboard is often the most expedient tool for making quick notes.
+I got my first job as a software developer in 2003. Which means I typed. A lot. My keyboard was often the most expedient tool for making quick notes.
 
-It began with simple "scratch notes", outlining how I was planning to tackle a problem or something I wanted to remember for later in the day. Eventually, I found myself needing to recall something from a previous day or share something with a colleague.
+It began with simple "scratch notes." I would outline how I planned to tackle a problem or note something I wanted to remember later in the day. Eventually, I found myself needing to recall something from a previous day or share something with a colleague.
 
-In 2011, I decided my digital note-taking needed a system of it's own. I signed up for [Simplenote](https://simplenote.com/) and began accumulating notes. Over the next decade, I migrated to NVAlt and then Bear, bringing my growing collection of notes with me each time. In tandem with my paper note-taking practice, I iterated on my digital note-taking process.
+I soon experienced the merciless onslaught common to all digital work: the todo. GTD, Agile, Kanban, Kaizen, sticky notes; tasks abounded, as they do. The interminable todo lists accumulated in my scratch notes but also poured over into my paper notebooks. Todos sprouted legs, becoming rants, rambles, and eventually robust articles.
 
-Today, I have 706 notes, including this article. I've been bitten by Zettelkasten bug. If you haven't heard of that particular insect, it's mostly harmless: it causes you to lose track of time whenever you have an idea.
+In 2011, faced with a pile of tasks and notes scattered across git repositories, directories, emails and task management systems, I decided my digital note-taking needed a system of it's own. I signed up for [Simplenote](https://simplenote.com/) and began accumulating notes.
 
-If you're really into organizational systems, I recorded a [livestream](livestream) where I whiteboarded my reading, writing, and note-taking systems.
+In tandem with my paper note-taking practice, I iterated on my digital note-taking process. Over the next decade, I migrated to NVAlt and then Bear, bringing my growing collection of notes with me each time. Tasks sometimes in paper notebooks, other times in todo apps like Wunderlist, then Todoist, and finally to a single plain markdown file.
 
-My digital note repository does have advantages over my multitudinous Moleskines.
+If you're really into organizational systems, I recorded a [livestream](livestream) where I whiteboarded my reading, writing, and note-taking systems.I've even been bitten by the Zettelkasten bug. (If you haven't heard of that particular insect, it's mostly harmless: it induces feverish scribbling whenever an idea strikes.)
+
+Today, I have over 700 notes spanning a decade, including this article, and my organizational systems continue to mature, though I would never claim to be satisfied with it.
+
+## Paper and digital:
+
+In my decades of experimentation, I've found that my digital note repository does have advantages over my multitudinous Moleskines.
 
 **Search.** I can instantly summon all the notes I've written in the past decade containing a search term. This is tremendously helpful when I know what I'm looking for and I want to go there right away.
 
-Conversely, my paper notebooks are organized in a linear fashion, with each day's consecutive note following the previous one. I attempted to use indexes and break up sections by topic, but it never stuck. Currently, I just have tabs that allow me to quickly jump to a specific date.
+Conversely, my paper notebooks have no magical search capabilities not avaiable in stores. Each notebook is organized linearly, with each day's consecutive note following the previous ones. I attempted to use indexes and break up sections by topic, but it never stuck.
+
+**Organization.** In addition to search, digital notes can be organized in a variety of non-linear ways, including tags and folders. Tags and folders can be helpful, but surprisingly it hasn't proved as valuable as I expected. I sometimes use a specific tag to focus in on a set of notes and "hide" my other notes, but for some reason a hierarchical tagging system hasn't really helped me. There are early signs that [wiki-style hyperlinks](https://en.wikipedia.org/wiki/Hyperlink) may prove more valuable for me.
+
+When it comes to paper, I have often dreamed of removing all my notebooks from their binding and having free sheafs of paper that I could sort, stack, and interleave. Alas, it has remained a dream. Currently, I just have tabs that allow me to quickly jump to a specific date.
 
 <picture of my paper notebooks with date tabs>
 
-**Organization.** In addition to search, digital notes can be organized in a variety of non-linear ways, including tags and folders. Tags and folders can be helpful, but surprisingly it hasn't proved as valuable as I expected. I sometimes use a specific tag to focus in on a set of notes and "hide" my other notes, but for some reason a hierarchical tagging system hasn't really helped me.
+**Sharing and collaboration.** I love the ease with which I can share a digital note with coworkers or migrate them to a collaborative document like Google Docs or Notion.
 
-The paper equivalent would be if paper pages could be removed from their binding and reshuffled.
+Paper is still hard to share. Even with ubiquitous smartphone cameras, wifi, and apps to quickly "scan" a document (I use the excellent [Office Lens](https://apps.apple.com/us/app/microsoft-office-lens-pdf-scan/id975925059)), it's still not as easy to share paper as it is digital text. One day I'll likely build a [DIY Book Scanner](https://diybookscanner.org/) and digitize my menagerie of moleskines.
 
-<TODO: Cut this one?>
-
-**Sharing and collaboration.** I love the ease with which I can share a digital note with coworkers or migrate them to a collaborative document like Google Docs or Notion. Paper is still hard to share. Even with ubiquitous smartphones with cameras, wifi, and apps to quickly "scan" a document (I use the excellent [Office Lens](https://apps.apple.com/us/app/microsoft-office-lens-pdf-scan/id975925059)), it's still not as easy to share paper as it is digital text.
-
-**Digital workflow integration.** Digital text is incredibly flexible. I'm writing this article in Bear. When I'm finished, I'll move the text to my [blog](https://github.com/jessmartin/jessmartdotin-gatsby), add some frontmatter at the top, check it into source control, and the article will instantly appear as an HTML page on my website. That magical experience is made possible by a structured text format called Markdown. This is just one example of integration into a digital workflow. Text can be inserted, extracted, transformed, all via simple scripts. That's simply not possible with paper.
+**Digital workflow integration.** Digital text is incredibly flexible. I'm writing this article in Bear. When I'm finished, I'll move the text to my [blog](https://github.com/jessmartin/jessmartdotin-gatsby), add some frontmatter at the top, check it into source control, and the article will instantly appear as an HTML page on my website. That magical experience is made possible by a structured text format called Markdown. This is just one example of integration into a digital workflow. Text can be inserted, extracted, and transformed, all via simple scripts. That's simply not possible with paper.
 
 **Archival.** If my house were on fire, the first (non-living) thing I would grab would be my notebooks. I once lost a half-filled notebook, a series of notes I was taking while living in Ireland. It's still a little painful to think about. I never worry about losing my digital notes.
 
 **Iteration.** Digital notes can be modified. It's just text! I frequently revisit, extend, adapt, and modify my digital notes. It's something I'm trying to get better at. But once something is laid to paper, it can't really be changed.
+
+Despite the many advantages of digital note-taking, the digital devices I've used to date (and there are many!) have lacked the romance of paper. No device captures the _feel_ of sitting down with a piece of paper and letting the ideas flow.
+
+Or at least that's what I thought.
 
 ## Why the reMarkable has stolen my heart
 
@@ -69,7 +81,7 @@ The reMarkable tablet arrived one November day in the middle of me recording a [
 <iframe width="420" height="315" src="https://youtu.be/W7hWbSxIvns">
 </iframe>
 
-If you made it through my fifteen utterances of "holy smokes" in seventy-five seconds, you also got to see the magic moment where I realized that this remarkable little tablet was going to replace my paper notebook.
+If you made it through my fifteen utterances of "holy smokes" in seventy-five seconds, you also got to see the magic moment where I realized that this remarkable little tablet was actually going to _replace_ my paper notebook.
 
 ### It feels like writing on paper
 
@@ -93,7 +105,7 @@ Paradoxically, I'm perfectly willing to pay more for a device that does less. Ra
 
 ### It feels built-to-last
 
-I took my paper notebooks everywhere. They got lugged around in a stack of books, tossed onto tables, unceremoniously buried in backpacks. They got crumbs on them while I scrawled an idea while eating lunch, and spilled on by careless children. reMarkable's metal case, fabric folio, and light weight feel up to the challenges of everyday life.
+I took my paper notebooks everywhere. They got lugged around in a stack of books, tossed onto tables, unceremoniously buried in backpacks. They got littered with crumbs as I scrawled an idea over lunch, and spilled on by careless children. Unlike fragile paper, reMarkable's metal case, fabric folio, and light weight feel up to the challenges of everyday life.
 
 Moleskines were a delight to carry and use, a beautiful marriage of form and function. reMarkable evokes that sense of an objet d'art with clean lines, easy textures, and cool metal.
 
