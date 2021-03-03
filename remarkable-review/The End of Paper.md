@@ -113,6 +113,18 @@ I expect to be carrying reMarkable everywhere for the next decade.
 
 ## What's next?
 
+The reality is that the only changes that reMarkable has introduced are:
+
+- my "paper notebooks" are immediately available digitally via cloud sync
+- I no longer have to carry around 2 (or more) notebooks - daily working log and personal journal are both there
+- reMarkable doubles as a reading device and has improved my reading workflow (separate article)
+
+There's still a lot of work to do to integrate the now-digitized "paper" notes into a larger digital workflow. And that's outside the scope of this article.
+
+What reMarkable has done is _still_ quite reMarkable: it has married the ambiance and focus of paper with the utility and integration of the digital world.
+
+That's quite the tall task and I'm thankful for the device and the improvements it has already made in my daily life.
+
 - How to integrate reMarkable notes into my workflow?
   - reMarkable doesn't have an API in the traditional sense.
   - large ecosystem of people using reMarkable
