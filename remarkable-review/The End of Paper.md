@@ -1,6 +1,7 @@
 # The End of Paper
 
-<picture of my moleskin collection/>
+(picture of my moleskin collection)
+
 Over the last thirteen years, I've filled twenty-six Moleskines from cover to cover. Yet within a few minutes of laying hands on the reMarkable tablet, I knew I'd never buy another paper notebook. It's just _that good_.
 
 How was I convinced to abandon a decade-old allegiance to analog in under ten minutes? Well, let's just say the reMarkable tablet is aptly named.
@@ -11,12 +12,13 @@ Let's jump in.
 
 ## My love affair with paper
 
-<photo of my stacks of moleskines/>
+(photo of my stacks of moleskines)
+
 The first dated entry I could find from one of my paper notebooks is April 4, 2000: my eighteenth birthday. The writings began as the overwrought ramblings of a passionate high schooler. Throughout [undergrad](http://cs.trinity.edu/) and [grad school](https://cs.unc.edu/), I continued to write frequently but haphazardly, not really establishing a structured habit for my usage of paper.
 
 But beginning in 2007, I got serious. I began carrying a paper notebook with me everywhere. And I mean everywhere. I started my day by cracking it open, carried it to all my meetings, lunches, church, travel, everywhere. Notebook-carrying became such a fixture of my identity that by 2010 the write-everything-down habit was hilariously caricatured by a friend in a skit: he acted out me on a date with my wife, studiously hunched over a 3 foot by 4 foot cardboard notebook, writing down every word of our romantic conversation.
 
-<photo of Eric with a "paper notebook"/>
+(photo of Eric with a "paper notebook")
 
 I wrote nearly every day. And my system evolved over time. What began as a single all-purpose notebook became two specialized notebooks: a daily working log and a long-form personal journal. I experimented with different formatting techniques for pages and dabbled in a variety of paper-based GTD systems. I tried out different form factors: soft cover, hard cover, small, medium, large, lined, unlined, grid. I scribbled my way through sheafs of dead trees.
 
@@ -56,7 +58,7 @@ Conversely, my paper notebooks have no magical search capabilities not avaiable 
 
 When it comes to paper, I have often dreamed of removing all my notebooks from their binding and having free sheafs of paper that I could sort, stack, and interleave. Alas, it has remained a dream. Currently, I just have tabs that allow me to quickly jump to a specific date.
 
-<picture of my paper notebooks with date tabs>
+(picture of my paper notebooks with date tabs)
 
 **Sharing and collaboration.** I love the ease with which I can share a digital note with coworkers or migrate them to a collaborative document like Google Docs or Notion.
 
@@ -113,7 +115,7 @@ I expect to be carrying reMarkable everywhere for the next decade.
 
 ## A life-changing device
 
-<Picture of two paper notebooks + reMarkable/>
+(Picture of two paper notebooks + reMarkable)
 
 It's exceedingly rare to buy a device that changes your life. And yet, the reMarkable has done just that. The reMarkable tablet marries the ambiance and focus of paper with the utility and integration of the digital world.
 
