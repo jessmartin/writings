@@ -46,7 +46,7 @@ Today, I have over 700 notes spanning a decade, including this article, and my o
 
 ## Paper and digital: Advantages
 
-In my decades of experimentation, I've found that my digital note repository does have advantages over my multitudinous Moleskines.
+In my decades of experimentation, I've found that my digital note repository does have advantages over my multitude of Moleskines.
 
 **Search.** I can instantly summon all the digital notes I've written in the past decade containing a search term. This is tremendously helpful when I know what I'm looking for and I want to go there right away.
 
@@ -105,29 +105,28 @@ Paradoxically, I'm perfectly willing to pay _more_ for a device that does less. 
 
 ### It feels built-to-last
 
-I took my paper notebooks everywhere. They got lugged around in a stack of books, tossed onto tables, unceremoniously buried in backpacks. They got littered with crumbs as I scrawled an idea over lunch, and spilled on by careless children. To replace paper, the reMarkable must match or exceed that durability. I'm happy to report that reMarkable's metal case, fabric folio, and light weight feel up to the challenges of everyday life.
+I took my paper notebooks everywhere. They got lugged around in a stack of books, tossed onto tables, unceremoniously buried in backpacks. They got littered with crumbs as I scrawled an idea over lunch, and spilled on by careless children. To replace paper, the reMarkable must match or exceed that durability. I'm happy to report that reMarkable's metal case, fabric folio, and comfortable weight feel up to the challenges of everyday life.
 
 Moleskines were a delight to carry and use, a beautiful marriage of form and function. reMarkable evokes that sense of an objet d'art with clean lines, easy textures, and cool metal.
 
 I expect to be carrying reMarkable everywhere for the next decade.
 
-## What's next?
+## A life-changing device
 
-The reality is that the only changes that reMarkable has introduced are:
+<Picture of two paper notebooks + reMarkable>
 
-- my "paper notebooks" are immediately available digitally via cloud sync
-- I no longer have to carry around 2 (or more) notebooks - daily working log and personal journal are both there
-- reMarkable doubles as a reading device and has improved my reading workflow (separate article)
+It's exceedingly rare to buy a device that changes your life. And yet, the reMarkable has done just that. The reMarkable tablet marries the ambiance and focus of paper with the utility and integration of the digital world.
 
-There's still a lot of work to do to integrate the now-digitized "paper" notes into a larger digital workflow. And that's outside the scope of this article.
+There's still a lot of work to do to integrate my instantly-digitized "paper" notes into a larger digital workflow. I'll address those workflows in a separate article. But here's how my life is different today:
 
-What reMarkable has done is _still_ quite reMarkable: it has married the ambiance and focus of paper with the utility and integration of the digital world.
+- I no longer carry around 2 (or more) notebooks - my reMarkable houses both my daily working log and personal journal in separate "notebooks." In fact, _all_ of my past notebooks are on the reMarkable as well! I can refer back to notes from months ago, long after the completed Moleskine would have been left on a shelf at home.
+- My "paper notebooks" are now (almost) immediately available digitally via reMarkable's cloud sync service. If I want to share a page or diagram, it's a simple process to grab the page via the app on my Mac.
+- reMarkable doubles as a reading device for PDFs and has improved my reading workflow. I used to print out papers I wanted to read and haul them around. Now I have them all on my reMarkable, with full ability to highlight and annotate as I read.
 
-That's quite the tall task and I'm thankful for the device and the improvements it has already made in my daily life.
+A few days ago, I misplaced the marker for my reMarkable. (You need an [EMR stylus](https://essentialpicks.com/emr-stylus-how-wacom-pens-work/) in order to write on a reMarkable - regular stylii don't work!) I felt a distinct feeling of loss - not being able to jot notes on my reMarkable throughout the day was almost physically painful.
 
-- How to integrate reMarkable notes into my workflow?
-  - reMarkable doesn't have an API in the traditional sense.
-  - large ecosystem of people using reMarkable
-- The software for ebook and PDF notation could be better. And I expect it will get there.
+As they say, sometimes you don't realize how much you love something until you lose it.
 
-#writing/drafting
+Fortunately, I recovered the marker a few days later, much to my relief. I really do love this little notebook!
+
+I'm excited to see what the next decade holds. It feels like we've passed an important threshold: an affordable digital tablet can now recreate the experience of writing on paper. I suspect we'll find ways to further improve the writing experience, but I'm most looking forward to a deeper workflow integration between the analog and the digital.
