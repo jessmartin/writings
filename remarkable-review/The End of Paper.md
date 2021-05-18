@@ -40,7 +40,7 @@ And I soon experienced the merciless onslaught common to all digital work: the t
 
 In 2011, faced with that pile of notes and tasks scattered across git repositories, directories, emails and task management systems, I decided my digital note-taking needed a system of it's own. I signed up for [Simplenote](https://simplenote.com/) and began centralizing all my digital writing under a single roof.
 
-In tandem with my paper note-taking practice, I iterated on my digital note-taking process. Over the next decade, I migrated to NVAlt and then Bear, bringing my growing collection of notes with me each time. Task-tracking underwent it's own changes: from paper notebooks, to todo apps like Wunderlist, then Todoist, and finally to a single plain markdown file.
+In tandem with my paper note-taking practice, I iterated on my digital note-taking process. Over the next decade, I migrated to [NVAlt](https://brettterpstra.com/projects/nvalt/) and then [Bear](https://bear.app/), bringing my growing collection of notes with me each time. Task-tracking underwent it's own changes: from paper notebooks, to todo apps like [Wunderlist](https://en.wikipedia.org/wiki/Wunderlist), then [Todoist](https://todoist.com/), and finally to a single plain markdown file.
 
 If you're really into organizational systems, I recorded a [livestream](livestream) where I whiteboarded my reading, writing, and note-taking systems.
 
@@ -64,7 +64,7 @@ When it comes to paper, I have often dreamed of removing all my notebooks from
 
 Paper is still far too difficult to share. Even with ubiquitous smartphone cameras, wifi, and apps to quickly "scan" a document (I use the excellent [Office Lens](https://apps.apple.com/us/app/microsoft-office-lens-pdf-scan/id975925059)), it's still not as easy to share paper as it is digital text. One day I'll likely build a [DIY Book Scanner](https://diybookscanner.org/) and digitize my menagerie of moleskines.
 
-**Digital workflow integration.** Digital text is incredibly flexible. For instance, I'm writing this article in Bear. When I'm finished, I'll move the text to my [blog](https://github.com/jessmartin/jessmartdotin-gatsby), add some frontmatter at the top, check it into source control, and the article will instantly appear as an HTML page on my website. That magical experience is made possible by a structured text format called Markdown. This is just one example of integration into a digital workflow. Text can be inserted, extracted, and transformed, all via simple scripts. That's simply not possible with paper.
+**Digital workflow integration.** Digital text is incredibly flexible. For instance, I'm writing this article in Bear. When I'm finished, I'll move the text to my [website](https://github.com/jessmartin/jessmartdotin-gatsby), add some frontmatter at the top, check it into source control, and the article will instantly appear as an HTML page on my website. That magical experience is made possible by a structured text format called Markdown. This is just one example of integration into a digital workflow. Text can be inserted, extracted, and transformed, all via simple scripts. That's simply not possible with paper.
 
 **Archival.** If my house were on fire, the first (non-living) thing I would grab would be my notebooks. I once lost a half-filled notebook, a series of notes I was taking while living in Ireland. It's still a little painful to think about. I never worry about losing my digital notes.
 
@@ -101,7 +101,7 @@ You can only do three things with reMarkable: write, read (and annotate) a PDF, 
 
 There's no email. No web browser. No social features. No notifications. You can write or you can read. There's not even a clock.
 
-[Some]() [reviewers]() complained about reMarkable's price tag given it can _only_ be used for writing and reading. They are entirely missing the point. In a world of sub-hundred dollar tablets that run every app under the sun, reMarkable's focus sets it apart.
+[Some](https://www.wired.com/review/remarkable-2/) [reviewers](https://appleinsider.com/articles/21/03/29/review-remarkable-2-is-better-than-ipad-for-notes-but-nothing-else) complained about reMarkable's price tag given it can _only_ be used for writing and reading. They are entirely missing the point. In a world of sub-hundred dollar tablets that run every app under the sun, reMarkable's focus sets it apart.
 
 Paradoxically, I'm perfectly willing to pay _more_ for a device that does less. Rather than getting pounded into the ground by the incessant notifications of the digital domain, reMarkable provides a serene focus on the few things that actually matter, while still giving me the advantages of digital content.
 
